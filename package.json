@@ -37,7 +37,6 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
-    "@emotion/react": "^11.10.4",
     "@mantine/core": "^7.0.0",
     "@mantine/dates": "^7.0.0",
     "@mantine/hooks": "^7.0.0",
