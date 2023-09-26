@@ -53,8 +53,8 @@ devDependencies:
     specifier: 2.6.2
     version: 2.6.2
   react-hook-form:
-    specifier: ^7.43.3
-    version: 7.43.3(react@18.2.0)
+    specifier: ^7.46.2
+    version: 7.46.2(react@18.2.0)
   rollup-plugin-peer-deps-external:
     specifier: ^2.2.4
     version: 2.2.4(rollup@3.29.2)
@@ -2585,8 +2585,8 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
 
-  /react-hook-form@7.43.3(react@18.2.0):
-    resolution: {integrity: sha512-LV6Fixh+hirrl6dXbM78aB6n//82aKbsNbcofF3wc6nx1UJLu3Jj/gsg1E5C9iISnLX+du8VTUyBUz2aCy+H7w==}
+  /react-hook-form@7.46.2(react@18.2.0):
+    resolution: {integrity: sha512-x1DWmHQchV7x2Rq9l99M/cQHC8JGchAnw9Z0uTz5KrPa0bTl/Inm1NR7ceOARfIrkNuQNAhuSuZPYa6k7QYn3Q==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
