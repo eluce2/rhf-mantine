@@ -25,7 +25,6 @@ function RHFDatePickerInput<T extends FieldValues = FieldValues>(
     <DatePickerInput
       {...field}
       value={(field.value as any) instanceof Date ? field.value : null}
-      onChange={(value) => field.onChange(value)}
       error={
         error
           ? error.message === "" && error.type === "required"
@@ -34,6 +33,7 @@ function RHFDatePickerInput<T extends FieldValues = FieldValues>(
           : false
       }
       {...others}
+      onChange={(value) => field.onChange(value)}
     />
   );
 }

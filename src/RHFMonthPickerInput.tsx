@@ -26,7 +26,6 @@ function RHFMonthPickerInput<T extends FieldValues = FieldValues>(
       <MonthPickerInput
         {...field}
         value={(field.value as any) instanceof Date ? field.value : null}
-        onChange={(value) => field.onChange(value)}
         error={
           error
             ? error.message === "" && error.type === "required"
@@ -35,6 +34,7 @@ function RHFMonthPickerInput<T extends FieldValues = FieldValues>(
             : false
         }
         {...others}
+        onChange={(value) => field.onChange(value)}
       />
     </>
   );
