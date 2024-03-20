@@ -1,5 +1,11 @@
 # rhf-mantine
 
+## 2.0.2
+
+### Patch Changes
+
+- f322199: update typings
+
 ## 2.0.1
 
 ### Patch Changes
