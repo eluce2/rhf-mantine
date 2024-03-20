@@ -1,5 +1,11 @@
 # rhf-mantine
 
+## 2.0.4
+
+### Patch Changes
+
+- update vite & prettier
+
 ## 2.0.3
 
 ### Patch Changes
