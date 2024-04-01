@@ -48,7 +48,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "dayjs": "^1.11.10",
     "prettier": "3.2.5",
-    "react-hook-form": "^7.51.1",
+    "react-hook-form": "^7.51.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript-paths": "^1.5.0",
     "tslib": "^2.6.2",
