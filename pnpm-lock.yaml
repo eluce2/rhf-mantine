@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^5.2.8
     version: 5.2.8(@types/node@20.11.30)
   vite-plugin-dts:
-    specifier: ^3.8.1
-    version: 3.8.1(@types/node@20.11.30)(rollup@4.13.0)(typescript@5.4.5)(vite@5.2.8)
+    specifier: ^3.9.0
+    version: 3.9.0(@types/node@20.11.30)(rollup@4.13.0)(typescript@5.4.5)(vite@5.2.8)
 
 packages:
 
@@ -166,7 +166,7 @@ packages:
     resolution: {integrity: sha512-8Dl6+HD/cKifutF5qGd/8ZJi84QeAKh+CEe1sBzz8UayBBGg1dAIJrdHOcOM5b2MpzWL2yuotJTtGjETq0qjXg==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.22.11
+      '@babel/types': 7.23.6
     dev: false
 
   /@babel/helper-module-transforms@7.23.3(@babel/core@7.23.7):
@@ -199,21 +199,12 @@ packages:
     dependencies:
       '@babel/types': 7.23.6
 
-  /@babel/helper-string-parser@7.22.5:
-    resolution: {integrity: sha512-mM4COjgZox8U+JcXQwPijIZLElkgEpO5rsERVDJTc2qfCDfERyob6k5WegS14SX18IIjv+XD+GrqNumY5JRCDw==}
-    engines: {node: '>=6.9.0'}
-    dev: false
-
   /@babel/helper-string-parser@7.23.4:
     resolution: {integrity: sha512-803gmbQdqwdf4olxrX4AJyFBV/RTr3rSmOj0rKwesmzlfhYNDEs+/iOcznzpNWlJlIlTJC2QfPFcHB6DlzdVLQ==}
     engines: {node: '>=6.9.0'}
 
   /@babel/helper-validator-identifier@7.22.20:
     resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
-    engines: {node: '>=6.9.0'}
-
-  /@babel/helper-validator-identifier@7.22.5:
-    resolution: {integrity: sha512-aJXu+6lErq8ltp+JhkJUfk1MTGyuA4v7f3pA+BJ5HLfNC6nAQ0Cpi9uOquUj8Hehg0aUiHzWQbOVJGao6ztBAQ==}
     engines: {node: '>=6.9.0'}
 
   /@babel/helper-validator-option@7.23.5:
@@ -234,7 +225,7 @@ packages:
     resolution: {integrity: sha512-78aUtVcT7MUscr0K5mIEnkwxPE0MaxkR5RxRwuHaQ+JuU5AmTPhY+do2mdzVTnIJJpyBglql2pehuBIWHug+WQ==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/helper-validator-identifier': 7.22.5
+      '@babel/helper-validator-identifier': 7.22.20
       chalk: 2.4.2
       js-tokens: 4.0.0
 
@@ -318,15 +309,6 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-
-  /@babel/types@7.22.11:
-    resolution: {integrity: sha512-siazHiGuZRz9aB9NpHy9GOs9xiQPKnMzgdr493iI1M67vRXpnEq8ZOOKzezC5q7zwuQ6sDhdSp4SD9ixKSqKZg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.22.5
-      '@babel/helper-validator-identifier': 7.22.5
-      to-fast-properties: 2.0.0
-    dev: false
 
   /@babel/types@7.23.6:
     resolution: {integrity: sha512-+uarb83brBzPKN38NX1MkB6vb6+mwvR6amUulqAE7ccQw1pEl+bCia9TbdG1lsnFP7lZySvUn37CHyXQdfTwzg==}
@@ -3553,8 +3535,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite-plugin-dts@3.8.1(@types/node@20.11.30)(rollup@4.13.0)(typescript@5.4.5)(vite@5.2.8):
-    resolution: {integrity: sha512-zEYyQxH7lKto1VTKZHF3ZZeOPkkJgnMrePY4VxDHfDSvDjmYMMfWjZxYmNwW8QxbaItWJQhhXY+geAbyNphI7g==}
+  /vite-plugin-dts@3.9.0(@types/node@20.11.30)(rollup@4.13.0)(typescript@5.4.5)(vite@5.2.8):
+    resolution: {integrity: sha512-pwFIEYQ3LZvMafkEGvNnileb6af5JuyZsBfYQrTDYxdeGEy0OS4B4hCsLPo5YGnhK5k9EzyO6BXVO6y+Lt5T2A==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       typescript: '*'
