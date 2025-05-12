@@ -1,5 +1,11 @@
 # rhf-mantine
 
+## 2.0.5
+
+### Patch Changes
+
+- update mantine packages
+
 ## 2.0.4
 
 ### Patch Changes
