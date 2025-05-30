@@ -1,3 +1,4 @@
+import React from "react";
 import { DevTool } from "@hookform/devtools";
 import {
   FieldValues,
@@ -39,7 +40,43 @@ type CreateFormProviderProps<T extends FieldValues> = FormProviderProps<T> & {
   onSubmit?: SubmitHandler<T>;
   onError?: SubmitErrorHandler<T>;
 };
-export const createFormProvider = <T extends FieldValues>() => {
+
+type FormComponent<T extends FieldValues> = React.FC<
+  CreateFormProviderProps<T> & { debug?: boolean }
+> & {
+  Autocomplete: ReturnType<typeof createAutocompleteField<T>>;
+  Checkbox: ReturnType<typeof createCheckboxField<T>>;
+  Chip: ReturnType<typeof createChipField<T>>;
+  ColorInput: ReturnType<typeof createColorInputField<T>>;
+  ColorPicker: ReturnType<typeof createColorPickerField<T>>;
+  FileInput: ReturnType<typeof createFileInputField<T>>;
+  TextInput: ReturnType<typeof createTextInputField<T>>;
+  Textarea: ReturnType<typeof createTextareaField<T>>;
+  JsonInput: ReturnType<typeof createJsonInputField<T>>;
+  MultiSelect: ReturnType<typeof createMultiSelectField<T>>;
+  NativeSelect: ReturnType<typeof createNativeSelectField<T>>;
+  NumberInput: ReturnType<typeof createNumberInputField<T>>;
+  PasswordInput: ReturnType<typeof createPasswordInputField<T>>;
+  SegmentedControl: ReturnType<typeof createSegmentedControlField<T>>;
+  Select: ReturnType<typeof createSelectField<T>>;
+  Slider: ReturnType<typeof createSliderField<T>>;
+  RangeSlider: ReturnType<typeof createRangeSliderField<T>>;
+  Switch: ReturnType<typeof createSwitchField<T>>;
+  RadioGroup: ReturnType<typeof createRadioGroupField<T>>;
+  DateInput: ReturnType<typeof createDateInputField<T>>;
+  DatePicker: ReturnType<typeof createDatePicker<T>>;
+  DatePickerInput: ReturnType<typeof createDatePickerField<T>>;
+  DateTimePickerInput: ReturnType<typeof createDateTimePickerField<T>>;
+  MonthPicker: ReturnType<typeof createMonthPicker<T>>;
+  MonthPickerInput: ReturnType<typeof createMonthPickerInput<T>>;
+  TimeInput: ReturnType<typeof createTimeInputField<T>>;
+  YearPicker: ReturnType<typeof createYearPicker<T>>;
+  YearPickerInput: ReturnType<typeof createYearPickerInput<T>>;
+};
+
+export const createFormProvider = <
+  T extends FieldValues = FieldValues,
+>(): FormComponent<T> => {
   const Form = (props: CreateFormProviderProps<T> & { debug?: boolean }) => {
     const {
       onSubmit = (values) => console.log(values),

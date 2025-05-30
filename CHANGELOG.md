@@ -1,5 +1,11 @@
 # rhf-mantine
 
+## 3.0.0-beta.0
+
+### Major Changes
+
+- Upgrade to Support React 19
+
 ## 2.0.5
 
 ### Patch Changes

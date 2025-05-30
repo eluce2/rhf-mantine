@@ -1,0 +1,10 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "rhf-mantine": "2.0.5"
+  },
+  "changesets": [
+    "wild-chefs-ring"
+  ]
+}
