@@ -8,7 +8,7 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 permissions:
-  id-token: write # Required for OIDC
+  id-token: write # Required for OIDC (npm Trusted Publishing)
   contents: read # Required for actions/checkout
 
 jobs:
@@ -17,7 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [22]
+        # Trusted publishing requires Node 22.14+ and npm 11.5.1+
+        node-version: [24]
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -29,6 +30,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
       - name: Install dependencies
         run: pnpm install
 
@@ -37,6 +39,7 @@ jobs:
         uses: changesets/action@v1
         with:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          # Publish uses npm Trusted Publishing (OIDC); no NPM_TOKEN needed. Ensure Trusted Publisher on npmjs.com matches workflow filename: release.yml
           publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
