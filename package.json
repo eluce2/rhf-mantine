@@ -3,16 +3,24 @@
   "private": false,
   "version": "3.0.0",
   "type": "module",
-  "repository": "https://github.com/eluce2/rhf-mantine",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eluce2/rhf-mantine.git"
+  },
   "bugs": "https://github.com/eluce2/rhf-mantine/issues",
   "main": "./dist/rhf-mantine.umd.js",
   "module": "./dist/rhf-mantine.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/rhf-mantine.es.js",
-      "types": "./dist/index.d.ts",
-      "require": "./dist/rhf-mantine.umd.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/rhf-mantine.es.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/rhf-mantine.umd.js"
+      }
     }
   },
   "files": [
@@ -23,7 +31,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node -e \"require('fs').copyFileSync('dist/index.d.ts','dist/index.d.cts')\" && publint --strict",
     "preview": "vite preview",
     "release": "pnpm build && changeset publish --access public",
     "knip": "knip"
@@ -50,6 +58,7 @@
     "dayjs": "^1.11.19",
     "knip": "^5.85.0",
     "prettier": "3.8.1",
+    "publint": "^0.3.17",
     "react-hook-form": "^7.71.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript-paths": "^1.5.0",
