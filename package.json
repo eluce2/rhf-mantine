@@ -28,6 +28,7 @@
     "src"
   ],
   "license": "MIT",
+  "provenance": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
