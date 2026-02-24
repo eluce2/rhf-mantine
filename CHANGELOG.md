@@ -1,5 +1,17 @@
 # rhf-mantine
 
+## 3.0.0
+
+### Major Changes
+
+- 56d7c22: Move react to peer deps
+- 56d7c22: Support Mantine 8
+- 63f6d51: Upgrade to Support React 19
+
+### Patch Changes
+
+- Update deps
+
 ## 3.0.0-beta.1
 
 ### Major Changes
