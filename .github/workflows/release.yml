@@ -9,7 +9,8 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 permissions:
   id-token: write # Required for OIDC (npm Trusted Publishing)
-  contents: read # Required for actions/checkout
+  contents: write # Required to push version tags/commits
+  pull-requests: write # Required for changesets release PR
 
 jobs:
   release:
@@ -42,4 +43,4 @@ jobs:
           # Publish uses npm Trusted Publishing (OIDC); no NPM_TOKEN needed. Ensure Trusted Publisher on npmjs.com matches workflow filename: release.yml
           publish: pnpm release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
