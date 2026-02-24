@@ -5,6 +5,7 @@
     "rhf-mantine": "2.0.5"
   },
   "changesets": [
+    "rude-parts-join",
     "wild-chefs-ring"
   ]
 }

@@ -1,5 +1,11 @@
 # rhf-mantine
 
+## 3.0.0-beta.1
+
+### Major Changes
+
+- Move react to peer deps
+
 ## 3.0.0-beta.0
 
 ### Major Changes

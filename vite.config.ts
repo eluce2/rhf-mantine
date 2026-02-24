@@ -37,7 +37,7 @@ export default defineConfig({
       fileName: (format) => `rhf-mantine.${format}.js`,
     },
     rollupOptions: {
-      external: ["react"],
+      external: ["react", "react-dom", "react/jsx-runtime"],
       plugins: [
         external(),
         typescriptPaths({
