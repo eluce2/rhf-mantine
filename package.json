@@ -61,7 +61,7 @@
     "dayjs": "^1.11.19",
     "knip": "^5.85.0",
     "prettier": "3.8.1",
-    "publint": "^0.3.17",
+    "publint": "^0.3.18",
     "react-hook-form": "^7.71.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript-paths": "^1.5.0",
