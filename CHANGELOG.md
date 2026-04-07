@@ -1,5 +1,11 @@
 # rhf-mantine
 
+## 3.0.1
+
+### Patch Changes
+
+- b914c12: chore: update deps to resolve security vulnerabilities
+
 ## 3.0.0
 
 ### Major Changes
