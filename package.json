@@ -34,14 +34,12 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
-    "build": "tsc && vite build && node -e \"require('fs').copyFileSync('dist/index.d.ts','dist/index.d.cts')\" && publint --strict",
+    "build": "tsc && vite build && node -e \"const fs=require('fs');const src=fs.existsSync('dist/index.d.ts')?'dist/index.d.ts':'dist/main.d.ts';if(src==='dist/main.d.ts')fs.copyFileSync(src,'dist/index.d.ts');fs.copyFileSync('dist/index.d.ts','dist/index.d.cts')\" && publint --strict",
     "preview": "vite preview",
     "release": "pnpm build && changeset publish --access public",
     "knip": "knip"
   },
-  "dependencies": {
-    "@hookform/devtools": "^4.4.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@mantine/core": "^8.0.0",
     "react": "^18.0.0 || ^19.0.0",
@@ -67,7 +65,6 @@
     "rollup-plugin-typescript-paths": "^1.5.0",
     "tslib": "^2.6.2",
     "typescript": "^5.9.3",
-    "vite": "^8.0.7",
-    "vite-plugin-dts": "^4.5.4"
+    "vite": "^8.0.7"
   }
 }

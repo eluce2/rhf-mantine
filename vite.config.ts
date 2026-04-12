@@ -4,16 +4,10 @@ import react from "@vitejs/plugin-react";
 import typescript from "@rollup/plugin-typescript";
 import path from "path";
 import { typescriptPaths } from "rollup-plugin-typescript-paths";
-import dts from "vite-plugin-dts";
 import external from "rollup-plugin-peer-deps-external";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    dts({
-      insertTypesEntry: true,
-    }),
-  ],
+  plugins: [react()],
   resolve: {
     alias: [
       {

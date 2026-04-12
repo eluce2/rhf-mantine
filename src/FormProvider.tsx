@@ -1,5 +1,4 @@
 import React from "react";
-import { DevTool } from "@hookform/devtools";
 import {
   FieldValues,
   FormProvider,
@@ -89,7 +88,7 @@ export const createFormProvider = <
       <FormProvider {...formMethods}>
         <form onSubmit={formMethods.handleSubmit(onSubmit, onError)}>
           {children}
-          {debug && <DevTool control={formMethods.control} />}
+          {debug && null}
         </form>
       </FormProvider>
     );
