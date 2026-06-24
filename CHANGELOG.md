@@ -1,5 +1,11 @@
 # rhf-mantine
 
+## 3.0.3
+
+### Patch Changes
+
+- Update transitive js-yaml resolution to resolve a security vulnerability.
+
 ## 3.0.2
 
 ### Patch Changes
