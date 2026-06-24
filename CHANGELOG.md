@@ -1,5 +1,11 @@
 # rhf-mantine
 
+## 3.0.4
+
+### Patch Changes
+
+- Update release workflow actions to Node 24 compatible versions.
+
 ## 3.0.3
 
 ### Patch Changes

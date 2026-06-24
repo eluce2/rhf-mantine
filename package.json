@@ -1,8 +1,9 @@
 {
   "name": "rhf-mantine",
   "private": false,
-  "version": "3.0.3",
+  "version": "3.0.4",
   "type": "module",
+  "packageManager": "pnpm@11.5.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eluce2/rhf-mantine.git"
