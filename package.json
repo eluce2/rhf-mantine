@@ -36,7 +36,7 @@
     "dev": "vite",
     "build": "tsc && vite build && node -e \"const fs=require('fs');const src=fs.existsSync('dist/index.d.ts')?'dist/index.d.ts':'dist/main.d.ts';if(src==='dist/main.d.ts')fs.copyFileSync(src,'dist/index.d.ts');fs.copyFileSync('dist/index.d.ts','dist/index.d.cts')\" && publint --strict",
     "preview": "vite preview",
-    "release": "pnpm build && changeset publish --access public",
+    "release": "pnpm build && changeset publish",
     "knip": "knip"
   },
   "dependencies": {},
@@ -65,6 +65,6 @@
     "rollup-plugin-typescript-paths": "^1.5.0",
     "tslib": "^2.6.2",
     "typescript": "^5.9.3",
-    "vite": "^8.0.16"
+    "vite": "~8.0.16"
   }
 }
