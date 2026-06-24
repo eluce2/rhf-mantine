@@ -9,8 +9,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 permissions:
   id-token: write # Required for OIDC (npm Trusted Publishing)
-  contents: write # Required to push version tags/commits
-  pull-requests: write # Required for changesets release PR
+  contents: read
 
 jobs:
   release:
@@ -32,15 +31,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
           registry-url: "https://registry.npmjs.org"
+      - name: Use npm 11.5.1
+        run: npm install -g npm@11.5.1
       - name: Install dependencies
         run: pnpm install
 
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          # Publish uses npm Trusted Publishing (OIDC); no NPM_TOKEN needed. Ensure Trusted Publisher on npmjs.com matches workflow filename: release.yml
-          publish: pnpm release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish to npm
+        run: pnpm release

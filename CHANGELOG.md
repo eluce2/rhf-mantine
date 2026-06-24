@@ -1,5 +1,12 @@
 # rhf-mantine
 
+## 3.0.5
+
+### Patch Changes
+
+- Replace the Changesets publish action with direct npm trusted publishing.
+- Remove the Changesets CLI dependency to clear the remaining transitive js-yaml alert.
+
 ## 3.0.4
 
 ### Patch Changes

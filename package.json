@@ -1,7 +1,7 @@
 {
   "name": "rhf-mantine",
   "private": false,
-  "version": "3.0.4",
+  "version": "3.0.5",
   "type": "module",
   "packageManager": "pnpm@11.5.1",
   "repository": {
@@ -37,7 +37,7 @@
     "dev": "vite",
     "build": "tsc && vite build && node -e \"const fs=require('fs');const src=fs.existsSync('dist/index.d.ts')?'dist/index.d.ts':'dist/main.d.ts';if(src==='dist/main.d.ts')fs.copyFileSync(src,'dist/index.d.ts');fs.copyFileSync('dist/index.d.ts','dist/index.d.cts')\" && publint --strict",
     "preview": "vite preview",
-    "release": "pnpm build && changeset publish",
+    "release": "pnpm build && npm publish --access public --provenance",
     "knip": "knip"
   },
   "dependencies": {},
@@ -48,7 +48,6 @@
     "react-hook-form": "^7.46.2"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.8",
     "@mantine/core": "^8.3.15",
     "@mantine/dates": "^8.3.15",
     "@mantine/hooks": "^8.3.15",
