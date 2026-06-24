@@ -5,6 +5,7 @@
 ### Patch Changes
 
 - Update release workflow actions to Node 24 compatible versions.
+- Narrow js-yaml override so Changesets publishing remains compatible.
 
 ## 3.0.3
 
