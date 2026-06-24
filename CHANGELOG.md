@@ -1,5 +1,11 @@
 # rhf-mantine
 
+## 3.0.2
+
+### Patch Changes
+
+- Update Vite and esbuild resolution to resolve security vulnerabilities.
+
 ## 3.0.1
 
 ### Patch Changes
